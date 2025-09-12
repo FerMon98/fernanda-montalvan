@@ -1,0 +1,53 @@
+/* Portfolio design tokens (Tailwind v4)
+   - Default: Electric Purple
+   - Alternate theme: Cyber Blue (activate with .theme-cyber on <html> or <body>)
+*/
+
+@import "tailwindcss";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap");
+
+/* Core tokens (Electric Purple as default) */
+@theme {
+  /* Base palette (Electric Purple) */
+  --color-background: #0C0A10;       /* bg */
+  --color-foreground: #EFE7FF;       /* text */
+  --color-primary: #9D4BFF;          /* accent */
+  --color-primary-foreground: #07060b; /* text on primary (deepened bg) */
+  --color-card: #1A1424;             /* card/surface */
+  --color-card-foreground: #EFE7FF;  /* text on card */
+  --color-border: #2A2236;           /* subtle border derived from bg/card */
+  --color-ring: #9D4BFF;             /* focus ring color */
+
+  /* Optional second accent (derived from primary for hover/ghosts) */
+  --color-accent: #BA8CFF;
+  --color-accent-foreground: #0C0A10;
+
+  /* Typography */
+  --font-sans: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  --font-display: "DM Serif Display", serif;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+}
+
+/* Cyber Blue theme override
+   Apply by adding class="theme-cyber" to <html> or <body>
+*/
+.theme-cyber {
+  --color-background: #070B12;
+  --color-foreground: #E8F7FB;
+  --color-primary: #3BE0FF;
+  --color-primary-foreground: #061016;
+  --color-card: #0F1E2A;
+  --color-card-foreground: #E8F7FB;
+  --color-border: #163343;
+  --color-ring: #3BE0FF;
+
+  --color-accent: #82EEFF;
+  --color-accent-foreground: #070B12;
+}

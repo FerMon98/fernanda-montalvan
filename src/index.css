@@ -1,0 +1,38 @@
+/* Tailwind v4 entry + tokens */
+@import "tailwindcss";
+@import "./Styles/token.css";
+
+/* Base layout */
+:root, html, body, #root { height: 100%; }
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings use display font + primary color */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display text-primary;
+}
+
+/* Card surface helper */
+.card {
+  @apply bg-card text-[color:var(--color-card-foreground)] border border-[color:var(--color-border)] rounded-lg;
+}
+
+/* Buttons (minimal, token-driven; extend in components as needed) */
+.button {
+  @apply inline-flex items-center justify-center gap-2 font-bold px-4 py-2 rounded-[var(--radius-pill)]
+         bg-primary text-[color:var(--color-primary-foreground)] border border-transparent;
+}
+.button:hover { filter: brightness(1.06); }
+.button--ghost {
+  @apply bg-transparent text-primary border border-[color:var(--color-primary)];
+}
+
+/* Focus ring (accessibility) */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}

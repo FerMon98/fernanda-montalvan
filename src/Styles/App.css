@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+/* Design tokens (Tailwind v4 @theme) */
+@theme {
+--font-sans: "Atkinson Hyperlegible", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+--font-display: "DM Serif Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+
+/* Electric Purple palette */
+--color-electric: #9D4BFF;
+--color-bg-electric: #0C0A10;
+--color-text-electric: #EFE7FF;
+--color-card-electric: #1A1424;
+
+
+/* Cyber Blue palette */
+--color-cyber: #3BE0FF;
+--color-bg-cyber: #070B12;
+--color-text-cyber: #E8F7FB;
+--color-card-cyber: #0F1E2A;
+}
+
+
+:root {
+/* Choose active theme by toggling these custom props */
+--bg-app: var(--color-bg-electric);
+--text-app: var(--color-text-electric);
+--card-app: var(--color-card-electric);
+--accent-app: var(--color-electric);
+}
+
+
+html, body, #root { height: 100%; }
+body { @apply bg-[var(--bg-app)] text-[var(--text-app)] font-sans; }
+
+
+/* Utilities for accents */
+.accent {
+color: var(--accent-app);
+}
+.bg-card { background-color: var(--card-app); }
+.font-display { font-family: var(--font-display); }
