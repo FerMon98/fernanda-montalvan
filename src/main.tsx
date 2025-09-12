@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-import './Styles/App.css';
-import App from './App';
-
+/**
+ * @description App entrypoint. Mounts React and provides a single HashRouter.
+ */
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HashRouter } from 'react-router-dom'
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-<React.StrictMode>
-<HashRouter>
-<App />
-</HashRouter>
-</React.StrictMode>
-);
+  <React.StrictMode>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </React.StrictMode>
+)
