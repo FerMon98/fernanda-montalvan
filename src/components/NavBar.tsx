@@ -1,34 +1,82 @@
-import { Link } from 'react-router-dom';
-import LanguageSwitcher from './LanguageSwitcher';
-import { useTranslate } from '../i18n/useTranslate';
+/**
+ * @description Top navigation bar with theme switch and language switcher.
+*/
 
+import { NavLink } from 'react-router-dom'
+import LanguageSwitcher from './LanguageSwitcher'
 
-type Props = {
-  theme: 'electric' | 'cyber';
-  onToggleTheme: () => void;
-};
+export type Theme = 'electric' | 'cyber'
 
+/**
+ * Props for NavBar component.
+ */
+interface NavBarProps {
+  /** Current theme token */
+  theme: Theme
+  /** Toggle theme handler */
+  onToggleTheme: () => void
+}
 
-export default function NavBar({ theme, onToggleTheme }: Props) {
-  const t = useTranslate();
+/**
+ * Renders the main navigation bar with active link styles.
+ */
+export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/20">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link to="#" className="flex items-center flex-row gap-2">
-          <img src="./media/favi.png" alt="Fernanda logo" className="h-6 w-6" />
-          <span className="font-display text-xl">Fernanda Montalván</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
-          <button
-            aria-label={t('nav.toggleThemeLabel')}
-            className="rounded-xl border border-white/20 px-3 py-2 hover:bg-white/10"
-            onClick={onToggleTheme}
+    <header className="sticky top-0 z-50 bg-[var(--bg-app)]/80 backdrop-blur border-b border-white/10">
+      <nav className="mx-auto max-w-5xl px-6 h-14 flex items-center gap-6">
+        <NavLink to="/" className="font-display text-lg">
+          <img src="./media/favi.png" alt="Fernanda Montalvan" className="inline-block w-10 h-8" />
+          <span className="opacity-70">·</span>Portfolio
+        </NavLink>
+
+        <div className="ml-auto flex items-center gap-4">
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              `text-sm ${isActive ? 'underline underline-offset-4' : 'opacity-80 hover:opacity-100'}`
+            }
           >
-            {theme === 'electric' ? t('nav.themeCyber') : t('nav.themeElectric')}
+            Projects
+          </NavLink>
+
+          <NavLink
+            to="/playground"
+            className={({ isActive }) =>
+              `text-sm ${isActive ? 'underline underline-offset-4' : 'opacity-80 hover:opacity-100'}`
+            }
+          >
+            Playground
+          </NavLink>
+
+          <NavLink
+            to="/resume"
+            className={({ isActive }) =>
+              `text-sm ${isActive ? 'underline underline-offset-4' : 'opacity-80 hover:opacity-100'}`
+            }
+          >
+            Resume
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `text-sm ${isActive ? 'underline underline-offset-4' : 'opacity-80 hover:opacity-100'}`
+            }
+          >
+            Contact
+          </NavLink>
+
+          <button
+            aria-label="Toggle theme"
+            onClick={onToggleTheme}
+            className="rounded-xl px-3 py-1 text-sm border border-white/10 hover:bg-white/5"
+          >
+            {theme === 'electric' ? '⚡ Electric' : '💠 Cyber'}
           </button>
+
+          <LanguageSwitcher />
         </div>
       </nav>
     </header>
-  );
+  )
 }
