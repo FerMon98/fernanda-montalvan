@@ -8,7 +8,10 @@ export const translations: Translations = {
     'hero.cta': 'See my projects',
     'nav.themeElectric': 'Electric',
     'nav.themeCyber': 'Cyber',
-    'nav.toggleThemeLabel': 'Toggle theme'
+    'nav.toggleThemeLabel': 'Toggle theme',
+    'footer.rights': "All rights reserved.",
+    'footer.social': "Social media links",
+
   },
   es: {
     'hero.title': 'Hola, soy Fernanda — Desarrolladora Full‑Stack',
@@ -16,7 +19,9 @@ export const translations: Translations = {
     'hero.cta': 'Ver mis proyectos',
     'nav.themeElectric': 'Eléctrico',
     'nav.themeCyber': 'Ciber',
-    'nav.toggleThemeLabel': 'Cambiar tema'
+    'nav.toggleThemeLabel': 'Cambiar tema',
+    'footer.rights': "Todos los derechos reservados.",
+    'footer.social': "Enlaces a redes sociales",
   },
   ca: {
     'hero.title': 'Hola, sóc la Fernanda — Desenvolupadora Full‑Stack',
@@ -24,6 +29,8 @@ export const translations: Translations = {
     'hero.cta': 'Veure els meus projectes',
     'nav.themeElectric': 'Elèctric',
     'nav.themeCyber': 'Ciber',
-    'nav.toggleThemeLabel': 'Canviar tema'
+    'nav.toggleThemeLabel': 'Canviar tema',
+    'footer.rights': "Tots els drets reservats.",
+    'footer.social': "Enllaços a les xarxes socials",
   }
 };
