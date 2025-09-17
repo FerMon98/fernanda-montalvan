@@ -11,7 +11,7 @@ export default function ResumePage(): JSX.Element {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
       <h1 className="text-3xl font-display mb-4">Resume</h1>
-      <a className="underline underline-offset-4" href="/resume.pdf" download>
+      <a className="underline underline-offset-4" href="/Fernanda_Montalvan_CV.pdf" download>
         Download PDF
       </a>
       <p className="opacity-80 mt-4">
