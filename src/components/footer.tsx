@@ -10,7 +10,7 @@ export default function Footer() {
   const t = useTranslate();
 
   return (
-    <footer className="mt-16 border-t border-white/10 bg-card py-8 text-sm">
+    <footer className="border-t border-white/10 bg-card py-8 text-sm">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 md:flex-row md:justify-between">
         {/* Left side */}
         <p className="opacity-80">
@@ -42,7 +42,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:fernandamontalvan.dev@gmail.com"
+                href="mailto:fernandaramo@outlook.es"
                 className="hover:underline"
               >
                 Email
