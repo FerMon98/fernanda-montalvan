@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import './Styles/App.css'
 import NavBar from './components/NavBar'
+import Footer from './components/footer'
 import LanguageProvider from './i18n/LanguageProvider'
 import { Routes, Route } from 'react-router-dom'
 import {JSX} from 'react'
@@ -44,6 +45,7 @@ export default function App(): JSX.Element {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <Footer />
       </div>
     </LanguageProvider>
   )
