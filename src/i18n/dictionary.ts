@@ -51,6 +51,44 @@ export const translations: Translations = {
     'tech.php': 'PHP',
     'tech.mysql': 'MySQL/MariaDB',
     'tech.vite': 'Vite',
+    'tech.javascript': 'JavaScript',
+    'tech.css': 'CSS',
+    'tech.html': 'HTML5',
+    'tech.bootstrap': 'Bootstrap',
+    'tech.nocodb': 'NocoDB',
+
+    // Projects section (titles, summaries, highlights)
+    'projects.featured': 'Featured Projects',
+
+    // Huellas
+    'projects.huellas.title': 'Huellas – Pet Health Platform',
+    'projects.huellas.summary':
+      'Full-stack platform with authentication, pet profiles, and health records. Built with clean architecture principles and containerized services.',
+    'projects.huellas.hl1': 'Hexagonal-inspired service boundaries',
+    'projects.huellas.hl2': 'Dockerized multi-service development setup',
+    'projects.huellas.hl3': 'REST API with typed contracts',
+
+    // Music Library
+    'projects.music.title': 'Ferzk’s Music Library',
+    'projects.music.summary':
+      'Personal music library with playlists, user authentication, and song metadata. Modular PHP architecture with normalized SQL schema.',
+    'projects.music.hl1': 'Authentication + playlists',
+    'projects.music.hl2': 'Normalized schema',
+    'projects.music.hl3': 'Clean separation with PHP includes',
+
+    // Fernanda’s Academy (UI)
+    'projects.academy.title': "Fernanda’s Academy — Learning Platform UI",
+    'projects.academy.summary': "Frontend prototype of a learning platform: search courses, dynamic display, and user-facing settings for language and theme.",
+    'projects.academy.hl1': 'Hooks-based React UI',
+    'projects.academy.hl2': 'Integration with Bootstrap',
+    'projects.academy.hl3': 'Dynamic content and search',
+    'projects.academy.hl4': 'Language & theme personalization',
+
+
+    // Placeholders
+    'projects.placeholder.title': 'Upcoming Project',
+    'projects.placeholder.description': 'A new project will be added here soon. Stay tuned!',
+    'projects.placeholder.summary': 'Placeholder for a future portfolio project.',
   },
 
   es: {
@@ -103,6 +141,46 @@ export const translations: Translations = {
     'tech.php': 'PHP',
     'tech.mysql': 'MySQL/MariaDB',
     'tech.vite': 'Vite',
+    'tech.javascript': 'JavaScript',
+    'tech.css': 'CSS',
+    'tech.html': 'HTML5',
+    'tech.bootstrap': 'Bootstrap',
+    'tech.nocodb': 'NocoDB',
+
+
+    // Projects
+    'projects.featured': 'Proyectos destacados',
+
+    // Huellas
+    'projects.huellas.title': 'Huellas – Plataforma de Salud de Mascotas',
+    'projects.huellas.summary':
+      'Plataforma full-stack con autenticación, perfiles de mascotas y registros de salud. Construida con principios de arquitectura limpia y servicios en contenedores.',
+    'projects.huellas.hl1': 'Límites de servicio inspirados en arquitectura hexagonal',
+    'projects.huellas.hl2': 'Entorno de desarrollo multi-servicio con Docker',
+    'projects.huellas.hl3': 'API REST con contratos tipados',
+
+    // Music Library
+    'projects.music.title': 'Ferzk’s Music Library',
+    'projects.music.summary':
+      'Librería musical personal con playlists, autenticación de usuarios y metadatos de canciones. Arquitectura PHP modular con esquema SQL normalizado.',
+    'projects.music.hl1': 'Autenticación + playlists',
+    'projects.music.hl2': 'Esquema normalizado',
+    'projects.music.hl3': 'Separación limpia con includes de PHP',
+
+    // Fernanda’s Academy (UI)
+    'projects.academy.title': "Fernanda’s Academy — Plataforma de aprendizaje (UI)",
+    'projects.academy.summary': "Prototipo frontend de una plataforma de aprendizaje: búsqueda de cursos, contenido dinámico y ajustes de idioma y tema.",
+    'projects.academy.hl1': 'UI en React basada en Hooks',
+    'projects.academy.hl2': 'Integración con Bootstrap',
+    'projects.academy.hl3': 'Contenido dinámico y búsqueda',
+    'projects.academy.hl4': 'Personalización de idioma y tema',
+
+
+
+    // Placeholders
+    'projects.placeholder.title': 'Próximo proyecto',
+    'projects.placeholder.description': 'Pronto añadiré un nuevo proyecto aquí. ¡Estate atento!',
+    'projects.placeholder.summary': 'Marcador de posición para un proyecto futuro del portafolio.',
   },
 
   ca: {
@@ -155,5 +233,42 @@ export const translations: Translations = {
     'tech.php': 'PHP',
     'tech.mysql': 'MySQL/MariaDB',
     'tech.vite': 'Vite',
+    'tech.javascript': 'JavaScript',
+    'tech.css': 'CSS',
+    'tech.html': 'HTML5',
+    'tech.bootstrap': 'Bootstrap',
+    'tech.nocodb': 'NocoDB',
+
+    // Projects
+    'projects.featured': 'Projectes destacats',
+
+    // Huellas
+    'projects.huellas.title': 'Huellas – Plataforma de Salut per a Mascotes',
+    'projects.huellas.summary':
+      'Plataforma full-stack amb autenticació, perfils de mascotes i registres de salut. Construïda amb principis d’arquitectura neta i serveis contenitzats.',
+    'projects.huellas.hl1': 'Límits de servei inspirats en arquitectura hexagonal',
+    'projects.huellas.hl2': 'Entorn de desenvolupament multi-servei amb Docker',
+    'projects.huellas.hl3': 'API REST amb contractes tipats',
+
+    // Music Library
+    'projects.music.title': 'Ferzk’s Music Library',
+    'projects.music.summary':
+      'Biblioteca musical personal amb playlists, autenticació d’usuaris i metadades de cançons. Arquitectura PHP modular amb esquema SQL normalitzat.',
+    'projects.music.hl1': 'Autenticació + playlists',
+    'projects.music.hl2': 'Esquema normalitzat',
+    'projects.music.hl3': 'Separació neta amb includes de PHP',
+
+    // Fernanda’s Academy (UI)
+    'projects.academy.title': "Fernanda’s Academy — Plataforma d’aprenentatge (UI)",
+    'projects.academy.summary': "Prototip frontend d’una plataforma d’aprenentatge: cerca de cursos, contingut dinàmic i ajustos d’idioma i tema.",
+    'projects.academy.hl1': 'Interfície en React amb Hooks',
+    'projects.academy.hl2': 'Integració amb Bootstrap',
+    'projects.academy.hl3': 'Contingut dinàmic i cerca',
+    'projects.academy.hl4': 'Personalització d’idioma i tema',
+
+    // Placeholders
+    'projects.placeholder.title': 'Projecte proper',
+    'projects.placeholder.description': 'Aviat afegiré un nou projecte aquí. Estigues atent!',
+    'projects.placeholder.summary': 'Marcador de posició per a un projecte futur del portafoli.',
   },
 };
