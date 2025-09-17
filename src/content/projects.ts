@@ -1,49 +1,77 @@
 /**
  * @description Strongly typed projects content for the portfolio grid/detail.
-*/
+ * Text is language-dynamic via i18n KEYS (dictionary.ts).
+ */
 
 export type Project = {
-  slug: 'huellas' | 'music-library'
-  title: string
+  slug: string
+  i18n: {
+    title: string
+    summary: string
+    highlights: string[]
+    stack: string[]
+  }
   period: string
-  stack: string[]
-  summary: string
-  repo: string
+  repo?: string
   live?: string
   cover?: string
-  highlights: string[]
 }
 
-/**
- * Portfolio projects to render on /projects and detail pages.
-*/
 export const projects: Project[] = [
   {
     slug: 'huellas',
-    title: 'Huellas – Pet Health Platform',
+    i18n: {
+      title: 'projects.huellas.title',
+      summary: 'projects.huellas.summary',
+      highlights: ['projects.huellas.hl1', 'projects.huellas.hl2', 'projects.huellas.hl3'],
+      stack: ['tech.react', 'tech.typescript', 'tech.node', 'tech.express', 'tech.mysql', 'tech.vite'],
+    },
     period: '2025',
-    stack: ['React', 'TypeScript', 'Node', 'Express', 'MySQL', 'Docker'],
-    summary:
-      'Full-stack platform with auth, profiles, and health records. Focus on clean architecture and containerized services.',
-    repo: 'https://github.com/FerMon98/huellas', // update if different
-    live: undefined,
-    cover: './media/huellas.svg', // swap to a real screenshot later
-    highlights: [
-      'Hexagonal-ish service boundaries',
-      'Dockerized multi-service dev setup',
-      'REST API with typed contracts',
-    ],
+    repo: 'https://github.com/FerMon98/huellas',
+    cover: './media/huellas.svg',
   },
   {
     slug: 'music-library',
-    title: 'Ferzk’s Music Library',
+    i18n: {
+      title: 'projects.music.title',
+      summary: 'projects.music.summary',
+      highlights: ['projects.music.hl1', 'projects.music.hl2', 'projects.music.hl3'],
+      stack: ['tech.php', 'tech.mysql', 'tech.vite'],
+    },
     period: '2024',
-    stack: ['PHP', 'MySQL/MariaDB', 'HTML5', 'CSS', 'Vanilla JS'],
-    summary:
-      'Personal music library with playlists, user auth, and song metadata. Modular PHP architecture + SQL schema.',
-    repo: 'https://github.com/FerMon98/Ferzk-Music-Library', // update if needed
-    live: undefined,
-    cover: './media/MusicLibraryBanner.png', // swap to a real screenshot later
-    highlights: ['Auth + playlists', 'Normalized schema', 'Clean separation (PHP includes)'],
+    repo: 'https://github.com/FerMon98/Ferzk-Music-Library',
+    cover: './media/MusicLibraryBanner.png',
+  },
+  {
+    slug: 'academy',
+    i18n: {
+      title: 'projects.academy.title',
+      summary: 'projects.academy.summary',
+      highlights: ['projects.academy.hl1', 'projects.academy.hl2', 'projects.academy.hl3', 'projects.academy.hl4'],
+      stack: ['tech.react', 'tech.javascript', 'tech.bootstrap', 'tech.css', 'tech.html', 'tech.vite'],
+    },
+    period: '2025',
+    repo: 'https://github.com/FerMon98/Fernandas_Academy',
+    cover: './media/academySS.png',
+  },
+  {
+    slug: 'project-x',
+    i18n: {
+      title: 'projects.placeholder.title',
+      summary: 'projects.placeholder.summary',
+      highlights: [],
+      stack: [],
+    },
+    period: 'TBD',
+  },
+  {
+    slug: 'project-y',
+    i18n: {
+      title: 'projects.placeholder.title',
+      summary: 'projects.placeholder.summary',
+      highlights: [],
+      stack: [],
+    },
+    period: 'TBD',
   },
 ]
