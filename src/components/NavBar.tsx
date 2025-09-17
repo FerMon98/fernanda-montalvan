@@ -26,7 +26,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
       <nav className="mx-auto max-w-5xl px-6 h-14 flex items-center gap-6">
         <NavLink to="/" className="font-display text-lg">
           <img src="./media/favi.png" alt="Fernanda Montalvan" className="inline-block w-10 h-8" />
-          <span className="opacity-70">·</span>Portfolio
+          <span className="opacity-70"> | </span>Portfolio
         </NavLink>
 
         <div className="ml-auto flex items-center gap-4">

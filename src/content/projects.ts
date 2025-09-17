@@ -27,7 +27,7 @@ export const projects: Project[] = [
       'Full-stack platform with auth, profiles, and health records. Focus on clean architecture and containerized services.',
     repo: 'https://github.com/FerMon98/huellas', // update if different
     live: undefined,
-    cover: '/media/logos/logo.png', // swap to a real screenshot later
+    cover: './media/huellas.svg', // swap to a real screenshot later
     highlights: [
       'Hexagonal-ish service boundaries',
       'Dockerized multi-service dev setup',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       'Personal music library with playlists, user auth, and song metadata. Modular PHP architecture + SQL schema.',
     repo: 'https://github.com/FerMon98/Ferzk-Music-Library', // update if needed
     live: undefined,
-    cover: '/media/logos/logo.png',
+    cover: './media/MusicLibraryBanner.png', // swap to a real screenshot later
     highlights: ['Auth + playlists', 'Normalized schema', 'Clean separation (PHP includes)'],
   },
 ]
