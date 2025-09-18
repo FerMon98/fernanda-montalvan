@@ -56,8 +56,9 @@ export const translations: Translations = {
     'tech.html': 'HTML5',
     'tech.bootstrap': 'Bootstrap',
     'tech.nocodb': 'NocoDB',
+    'tech.docker': 'Docker',
 
-    // Projects section (titles, summaries, highlights)
+    // Projects section
     'projects.featured': 'Featured Projects',
 
     // Huellas
@@ -67,6 +68,10 @@ export const translations: Translations = {
     'projects.huellas.hl1': 'Hexagonal-inspired service boundaries',
     'projects.huellas.hl2': 'Dockerized multi-service development setup',
     'projects.huellas.hl3': 'REST API with typed contracts',
+    'projects.huellas.role': 'Full-Stack Developer',
+    'projects.huellas.resp1': 'Designed React UI and component structure',
+    'projects.huellas.resp2': 'Built Node/Express API with typed contracts',
+    'projects.huellas.resp3': 'Dockerized services and MySQL schema',
 
     // Music Library
     'projects.music.title': 'Ferzk’s Music Library',
@@ -75,15 +80,23 @@ export const translations: Translations = {
     'projects.music.hl1': 'Authentication + playlists',
     'projects.music.hl2': 'Normalized schema',
     'projects.music.hl3': 'Clean separation with PHP includes',
+    'projects.music.role': 'PHP/MySQL Developer',
+    'projects.music.resp1': 'Implemented auth and playlist flows in PHP',
+    'projects.music.resp2': 'Designed normalized SQL schema for library',
+    'projects.music.resp3': 'Wrote clean, modular PHP includes',
 
     // Fernanda’s Academy (UI)
-    'projects.academy.title': "Fernanda’s Academy — Learning Platform UI",
-    'projects.academy.summary': "Frontend prototype of a learning platform: search courses, dynamic display, and user-facing settings for language and theme.",
+    'projects.academy.title': 'Fernanda’s Academy — Learning Platform UI',
+    'projects.academy.summary':
+      'Frontend prototype of a learning platform: search courses, dynamic display, and user-facing settings for language and theme.',
     'projects.academy.hl1': 'Hooks-based React UI',
     'projects.academy.hl2': 'Integration with Bootstrap',
     'projects.academy.hl3': 'Dynamic content and search',
     'projects.academy.hl4': 'Language & theme personalization',
-
+    'projects.academy.role': 'Frontend Developer',
+    'projects.academy.resp1': 'Built course listing and search UX with Hooks',
+    'projects.academy.resp2': 'Integrated Bootstrap and responsive layouts',
+    'projects.academy.resp3': 'Added language/theme settings for users',
 
     // Placeholders
     'projects.placeholder.title': 'Upcoming Project',
@@ -146,7 +159,7 @@ export const translations: Translations = {
     'tech.html': 'HTML5',
     'tech.bootstrap': 'Bootstrap',
     'tech.nocodb': 'NocoDB',
-
+    'tech.docker': 'Docker',
 
     // Projects
     'projects.featured': 'Proyectos destacados',
@@ -158,6 +171,10 @@ export const translations: Translations = {
     'projects.huellas.hl1': 'Límites de servicio inspirados en arquitectura hexagonal',
     'projects.huellas.hl2': 'Entorno de desarrollo multi-servicio con Docker',
     'projects.huellas.hl3': 'API REST con contratos tipados',
+    'projects.huellas.role': 'Desarrolladora Full-Stack',
+    'projects.huellas.resp1': 'Diseñé la UI en React y la estructura de componentes',
+    'projects.huellas.resp2': 'Construí API con Node/Express y contratos tipados',
+    'projects.huellas.resp3': 'Dockericé servicios y el esquema MySQL',
 
     // Music Library
     'projects.music.title': 'Ferzk’s Music Library',
@@ -166,16 +183,23 @@ export const translations: Translations = {
     'projects.music.hl1': 'Autenticación + playlists',
     'projects.music.hl2': 'Esquema normalizado',
     'projects.music.hl3': 'Separación limpia con includes de PHP',
+    'projects.music.role': 'Desarrolladora PHP/MySQL',
+    'projects.music.resp1': 'Implementé autenticación y playlists en PHP',
+    'projects.music.resp2': 'Diseñé el esquema SQL normalizado de la librería',
+    'projects.music.resp3': 'Código PHP modular y claro (includes)',
 
     // Fernanda’s Academy (UI)
-    'projects.academy.title': "Fernanda’s Academy — Plataforma de aprendizaje (UI)",
-    'projects.academy.summary': "Prototipo frontend de una plataforma de aprendizaje: búsqueda de cursos, contenido dinámico y ajustes de idioma y tema.",
+    'projects.academy.title': 'Fernanda’s Academy — Plataforma de aprendizaje (UI)',
+    'projects.academy.summary':
+      'Prototipo frontend de una plataforma de aprendizaje: búsqueda de cursos, contenido dinámico y ajustes de idioma y tema.',
     'projects.academy.hl1': 'UI en React basada en Hooks',
     'projects.academy.hl2': 'Integración con Bootstrap',
     'projects.academy.hl3': 'Contenido dinámico y búsqueda',
     'projects.academy.hl4': 'Personalización de idioma y tema',
-
-
+    'projects.academy.role': 'Desarrolladora Frontend',
+    'projects.academy.resp1': 'Listado de cursos y búsqueda con Hooks',
+    'projects.academy.resp2': 'Integración con Bootstrap y diseño responsive',
+    'projects.academy.resp3': 'Ajustes de idioma y tema para usuarios',
 
     // Placeholders
     'projects.placeholder.title': 'Próximo proyecto',
@@ -238,6 +262,7 @@ export const translations: Translations = {
     'tech.html': 'HTML5',
     'tech.bootstrap': 'Bootstrap',
     'tech.nocodb': 'NocoDB',
+    'tech.docker': 'Docker',
 
     // Projects
     'projects.featured': 'Projectes destacats',
@@ -249,6 +274,10 @@ export const translations: Translations = {
     'projects.huellas.hl1': 'Límits de servei inspirats en arquitectura hexagonal',
     'projects.huellas.hl2': 'Entorn de desenvolupament multi-servei amb Docker',
     'projects.huellas.hl3': 'API REST amb contractes tipats',
+    'projects.huellas.role': 'Desenvolupadora Full-Stack',
+    'projects.huellas.resp1': 'Disseny de la UI en React i estructura de components',
+    'projects.huellas.resp2': 'API amb Node/Express i contractes tipats',
+    'projects.huellas.resp3': 'Dockerització de serveis i esquema MySQL',
 
     // Music Library
     'projects.music.title': 'Ferzk’s Music Library',
@@ -257,14 +286,23 @@ export const translations: Translations = {
     'projects.music.hl1': 'Autenticació + playlists',
     'projects.music.hl2': 'Esquema normalitzat',
     'projects.music.hl3': 'Separació neta amb includes de PHP',
+    'projects.music.role': 'Desenvolupadora PHP/MySQL',
+    'projects.music.resp1': 'Autenticació i playlists en PHP',
+    'projects.music.resp2': 'Disseny d’esquema SQL normalitzat',
+    'projects.music.resp3': 'Codi PHP modular i net (includes)',
 
     // Fernanda’s Academy (UI)
-    'projects.academy.title': "Fernanda’s Academy — Plataforma d’aprenentatge (UI)",
-    'projects.academy.summary': "Prototip frontend d’una plataforma d’aprenentatge: cerca de cursos, contingut dinàmic i ajustos d’idioma i tema.",
+    'projects.academy.title': 'Fernanda’s Academy — Plataforma d’aprenentatge (UI)',
+    'projects.academy.summary':
+      'Prototip frontend d’una plataforma d’aprenentatge: cerca de cursos, contingut dinàmic i ajustos d’idioma i tema.',
     'projects.academy.hl1': 'Interfície en React amb Hooks',
     'projects.academy.hl2': 'Integració amb Bootstrap',
     'projects.academy.hl3': 'Contingut dinàmic i cerca',
     'projects.academy.hl4': 'Personalització d’idioma i tema',
+    'projects.academy.role': 'Desenvolupadora Frontend',
+    'projects.academy.resp1': 'Llistat de cursos i cerca amb Hooks',
+    'projects.academy.resp2': 'Integració amb Bootstrap i disseny responsive',
+    'projects.academy.resp3': "Ajustos d’idioma i tema per a usuaris",
 
     // Placeholders
     'projects.placeholder.title': 'Projecte proper',
