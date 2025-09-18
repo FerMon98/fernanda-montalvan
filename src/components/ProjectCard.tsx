@@ -6,8 +6,19 @@
  */
 
 import { Link } from 'react-router-dom'
-import { FaReact, FaNodeJs, FaPhp, FaRocket } from 'react-icons/fa'
-import { SiTypescript, SiTailwindcss, SiMysql, SiExpress, SiVite } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaPhp, FaRocket, FaDatabase } from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiMysql,
+  SiExpress,
+  SiVite,
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiBootstrap,
+  SiDocker,
+} from 'react-icons/si'
 import { JSX } from 'react/jsx-runtime'
 
 type TFunc = (k: string) => string
@@ -24,16 +35,23 @@ type ProjectCardProps = {
 }
 
 // Map i18n tech keys -> icon components (keep in one place)
+// If a tech doesn’t have a brand icon (e.g., NocoDB), use a sensible fallback.
 type IconProps = { className?: string }
 const techIconMap: Record<string, (p: IconProps) => JSX.Element> = {
   'tech.react': (p) => <FaReact {...p} />,
   'tech.typescript': (p) => <SiTypescript {...p} />,
+  'tech.javascript': (p) => <SiJavascript {...p} />,
   'tech.tailwind': (p) => <SiTailwindcss {...p} />,
   'tech.node': (p) => <FaNodeJs {...p} />,
   'tech.express': (p) => <SiExpress {...p} />,
   'tech.php': (p) => <FaPhp {...p} />,
   'tech.mysql': (p) => <SiMysql {...p} />,
+  'tech.html': (p) => <SiHtml5 {...p} />,
+  'tech.css': (p) => <SiCss3 {...p} />,
+  'tech.bootstrap': (p) => <SiBootstrap {...p} />,
   'tech.vite': (p) => <SiVite {...p} />,
+  'tech.docker': (p) => <SiDocker {...p} />,
+  'tech.nocodb': (p) => <FaDatabase {...p} />, // fallback DB icon
 }
 
 /** Small internal badge with icon + label */

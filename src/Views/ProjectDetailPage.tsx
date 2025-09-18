@@ -6,21 +6,43 @@
 import { useParams, Link } from 'react-router-dom'
 import { useTranslate } from '../i18n/useTranslate'
 import { projects } from '../content/projects'
-import { FaReact, FaNodeJs, FaPhp, FaExternalLinkAlt, FaGithub, FaArrowLeft } from 'react-icons/fa'
-import { SiTypescript, SiTailwindcss, SiMysql, SiExpress, SiVite } from 'react-icons/si'
+
+import { FaReact, FaNodeJs, FaPhp, FaExternalLinkAlt, FaGithub, FaArrowLeft, FaDatabase } from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiMysql,
+  SiExpress,
+  SiVite,
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiBootstrap,
+  SiDocker,
+} from 'react-icons/si'
+
 import { JSX } from 'react/jsx-runtime'
 
 type IconProps = { className?: string }
+
+/** Map i18n tech keys -> icon components used in the Tech stack sidebar */
 const techIconMap: Record<string, (p: IconProps) => JSX.Element> = {
   'tech.react': (p) => <FaReact {...p} />,
   'tech.typescript': (p) => <SiTypescript {...p} />,
+  'tech.javascript': (p) => <SiJavascript {...p} />,
   'tech.tailwind': (p) => <SiTailwindcss {...p} />,
   'tech.node': (p) => <FaNodeJs {...p} />,
   'tech.express': (p) => <SiExpress {...p} />,
   'tech.php': (p) => <FaPhp {...p} />,
   'tech.mysql': (p) => <SiMysql {...p} />,
+  'tech.html': (p) => <SiHtml5 {...p} />,
+  'tech.css': (p) => <SiCss3 {...p} />,
+  'tech.bootstrap': (p) => <SiBootstrap {...p} />,
   'tech.vite': (p) => <SiVite {...p} />,
+  'tech.docker': (p) => <SiDocker {...p} />,
+  'tech.nocodb': (p) => <FaDatabase {...p} />, // fallback db icon
 }
+
 
 export default function ProjectDetailPage(): JSX.Element {
   const { slug } = useParams()
