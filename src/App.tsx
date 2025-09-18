@@ -35,7 +35,7 @@ export default function App(): JSX.Element {
 
   return (
     <LanguageProvider>
-      <div className="min-h-dvh">
+      <div className="min-h-dvh header-pad">
         <NavBar theme={theme} onToggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={<HomePage />} />
