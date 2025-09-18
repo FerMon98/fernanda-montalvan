@@ -3,10 +3,10 @@
  * - Desktop: inline links + theme + language
  * - Mobile: hamburger reveals links in a slide-down panel; theme + language stay visible
  */
-
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import LanguageSwitcher from './LanguageSwitcher'
+import { TranslatorContext } from '../i18n/TranslatorContext'
 
 export type Theme = 'electric' | 'cyber'
 
@@ -17,11 +17,10 @@ interface NavBarProps {
 
 export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
   const [open, setOpen] = useState(false)
+  const { t } = useContext(TranslatorContext) // <- i18n translation function
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm transition ${
-      isActive ? 'text-[var(--accent-app)]' : 'text-white/85 hover:text-white'
-    }`
+    `text-sm transition ${isActive ? 'text-[var(--accent-app)]' : 'text-white/85 hover:text-white'}`
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[var(--bg-app)]/80 backdrop-blur">
@@ -33,32 +32,33 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
         <Link to="/" className="flex items-center gap-2">
           <img
             src="./media/favi.png"
-            alt="Fernanda Montalván"
+            alt={t('nav.brand')}
             className="h-8 w-8 rounded-full ring-1 ring-white/30 bg-black/60 object-contain"
-          /> | 
-          <span className="font-display text-lg text-[var(--text-app)]">Portfolio</span>
+          />{' '}
+          |{' '}
+          <span className="font-display text-lg text-[var(--text-app)]">{t('nav.brand')}</span>
         </Link>
 
         {/* Desktop links */}
         <nav className="hidden items-center gap-6 md:flex">
           <NavLink to="/projects" className={linkClass}>
-            Projects
+            {t('nav.projects')}
           </NavLink>
           <NavLink to="/playground" className={linkClass}>
-            Playground
+            {t('nav.playground')}
           </NavLink>
           <NavLink to="/resume" className={linkClass}>
-            Resume
+            {t('nav.resume')}
           </NavLink>
           <NavLink to="/contact" className={linkClass}>
-            Contact
+            {t('nav.contact')}
           </NavLink>
         </nav>
 
         {/* Right controls (always visible) */}
         <div className="flex items-center gap-2">
           <button
-            aria-label="Toggle theme"
+            aria-label={t('nav.toggleThemeLabel')}
             onClick={onToggleTheme}
             className="rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white/90 hover:bg-white/10"
           >
@@ -76,11 +76,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
             className="ml-1 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white md:hidden"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5" strokeWidth="2">
-              {open ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M3 6h18M3 12h18M3 18h18" />
-              )}
+              {open ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
             </svg>
           </button>
         </div>
@@ -96,22 +92,22 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
         <ul className="mx-auto max-w-6xl px-4 py-3 md:px-6">
           <li>
             <NavLink to="/projects" onClick={() => setOpen(false)} className={linkClass}>
-              Projects
+              {t('nav.projects')}
             </NavLink>
           </li>
           <li className="mt-2">
             <NavLink to="/playground" onClick={() => setOpen(false)} className={linkClass}>
-              Playground
+              {t('nav.playground')}
             </NavLink>
           </li>
           <li className="mt-2">
             <NavLink to="/resume" onClick={() => setOpen(false)} className={linkClass}>
-              Resume
+              {t('nav.resume')}
             </NavLink>
           </li>
           <li className="mt-2">
             <NavLink to="/contact" onClick={() => setOpen(false)} className={linkClass}>
-              Contact
+              {t('nav.contact')}
             </NavLink>
           </li>
         </ul>
