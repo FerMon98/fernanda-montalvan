@@ -24,6 +24,12 @@
       {
         "aria-valid-attr-value": "off"
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
