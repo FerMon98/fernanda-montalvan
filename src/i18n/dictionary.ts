@@ -14,6 +14,161 @@ export const translations: Translations = {
     'nav.themeElectric': 'Electric',
     'nav.themeCyber': 'Cyber',
     'nav.toggleThemeLabel': 'Toggle theme',
+    'nav.brand': 'Fernanda Montalván',
+    'nav.projects': 'Projects',
+    'nav.playground': 'Playground',
+    'nav.about': 'About',
+    'nav.resume': 'Resume',
+    'nav.contact': 'Contact',
+    'nav.language': 'Language',
+
+    // Resume (titles, nav, updated tag)
+    'resume.title': 'Resume',
+    'resume.download': 'Download PDF',
+    'resume.updated': 'Updated Sep 2025',
+    'resume.summaryTitle': 'Professional Summary',
+    'resume.skillsTitle': 'Technical Skills',
+    'resume.experienceTitle': 'Experience',
+    'resume.educationTitle': 'Education',
+    'resume.certificationsTitle': 'Certifications',
+    'resume.nav.summary': 'Summary',
+    'resume.nav.experience': 'Experience',
+    'resume.nav.skills': 'Skills',
+    'resume.nav.education': 'Education',
+    'resume.nav.certs': 'Certifications',
+    'resume.softSkillsTitle': 'Soft Skills',
+    'resume.softSkills.json': JSON.stringify([
+      'Communication',
+      'Teamwork',
+      'Problem solving',
+      'Adaptability',
+      'Attention to detail',
+      'Ownership',
+      'Time management',
+      'Mentoring & training',
+      'User empathy',
+      'Documentation'
+    ]),
+
+
+    // Resume (dynamic content)
+    'resume.summary':
+      'Full-Stack Developer (React, TypeScript, PHP, MySQL) focused on clean UX, accessibility, and pragmatic delivery. Background in Technical Support and KYC training helps me translate real user needs into reliable interfaces and APIs.',
+
+    // skills: string[]
+    'resume.skills.json': JSON.stringify([
+      'React', 'TypeScript', 'Vite',
+      'Node.js', 'Express',
+      'PHP', 'MySQL/MariaDB',
+      'Tailwind 4.1', 'shadcn/ui',
+      'Prisma', 'Figma',
+      'Docker (basics)', 'GitHub Actions'
+    ]),
+
+    // experience: {role, company, period, location?, bullets[]}[]
+    'resume.experience.json': JSON.stringify([
+      {
+        role: 'KYC Specialist',
+        company: 'Fourthline',
+        period: '2024–2025',
+        location: 'Barcelona, Spain',
+        bullets: [
+          'Conducted KYC and QES checks ensuring AML/eIDAS compliance; reduced verification errors by 25%.',
+          'Streamlined verification workflows with cross-functional teams, cutting average resolution time by 20%.'
+        ]
+      },
+      {
+        role: 'Risk Trainer',
+        company: 'Teleperformance',
+        period: '2022–2023',
+        location: 'Barcelona, Spain',
+        bullets: [
+          'Developed and delivered fraud-prevention trainings, raising agent scores by 15%.',
+          'Maintained training content, ensuring alignment with evolving compliance policies.'
+        ]
+      },
+      {
+        role: 'Risk Specialist',
+        company: 'Teleperformance',
+        period: '2022',
+        location: 'Barcelona, Spain',
+        bullets: [
+          'Reviewed merchant applications and transactions to validate compliance; helped prevent €50K+ potential fraud losses.',
+          'Authored daily management reports highlighting risk patterns and mitigation strategies.'
+        ]
+      },
+      {
+        role: 'Office 365 Ambassador (Microsoft)',
+        company: 'Concentrix',
+        period: '2019–2021',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Tier-2 support for Exchange, Teams, SharePoint; onboarding and license management.',
+          'Assisted hybrid/cloud migration to Azure AD; resolved setup and integration issues.',
+          'Contributed to internal KB updates and training efforts.'
+        ]
+      },
+      {
+        role: 'Sr. Technical Support (Microsoft)',
+        company: 'Concentrix',
+        period: '2018–2019',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Frontline support for Windows OS and Microsoft software (connectivity, updates, compatibility).',
+          'Password resets and account recovery; improved access resolution times.'
+        ]
+      }
+    ]),
+
+    // education: {title, org, hours?, year?, location?, details?: string[]}[]
+    'resume.education.json': JSON.stringify([
+      {
+        title: 'Full-Stack with React (Web App Developer)',
+        org: 'Fundación Esplai – Migracode',
+        hours: '376h',
+        year: '2025',
+        location: 'Barcelona, Spain',
+        details: ['React, TypeScript, Node/Express, Vite, Tailwind, projects and teamwork']
+      },
+      {
+        title: 'Web App Developer',
+        org: 'Grup CIEF – SOC (Professional Certificate)',
+        hours: '510h',
+        year: '2025',
+        location: 'Barcelona, Spain',
+        details: ['HTML, CSS, JavaScript, PHP, MySQL, deployments']
+      },
+      {
+        title: 'Cybersecurity in the Industry',
+        org: 'MainJobs',
+        hours: '120h',
+        year: '2025',
+        location: 'Barcelona, Spain',
+        details: ['Security fundamentals, risk, mitigation, best practices']
+      }
+    ]),
+
+    // certifications: {title, org?, year?, location?}[]
+    'resume.certs.json': JSON.stringify([
+      { title: 'Microsoft Azure Fundamentals (AZ-900)' },
+      { title: 'Agile Project Management with SCRUM', org: 'Índice Gestoría y Formación', year: '2024', location: 'Barcelona' },
+      { title: 'Global Diplomacy – Diplomacy in the Modern World', org: 'University of London', year: '2020', location: 'Managua' }
+    ]),
+
+    // Contact
+    'contact.title': 'Contact',
+    'contact.subtitle': 'Let’s build something great together.',
+    'contact.nameLabel': 'Your name',
+    'contact.emailLabel': 'Email',
+    'contact.whereLabel': 'Where are you contacting from?',
+    'contact.subjectLabel': 'Subject (optional)',
+    'contact.messageLabel': 'Message',
+    'contact.privacyLabel': 'I consent to be contacted about this inquiry.',
+    'contact.submit': 'Send message',
+    'contact.sending': 'Sending…',
+    'contact.success': 'Thanks! Your message was sent.',
+    'contact.error': 'Something went wrong. Please try again.',
+    'contact.honeypot': 'Leave this field empty',
 
     // Footer
     'footer.rights': 'All rights reserved.',
@@ -34,7 +189,7 @@ export const translations: Translations = {
     'about.support.item5': 'Ticketing, documentation, and knowledge bases',
     'about.support.item6': 'Risk/KYC operations and agent training',
 
-    // Certifications
+    // Certifications (About block)
     'about.certs.title': 'Certifications & Training',
     'about.certs.item1': 'Web App Development Certification — 510h',
     'about.certs.item2': 'Full-Stack w/ React Bootcamp — 376h (Fundación Esplai, Sep 2025)',
@@ -58,7 +213,7 @@ export const translations: Translations = {
     'tech.nocodb': 'NocoDB',
     'tech.docker': 'Docker',
 
-    // Projects section
+    // Projects section (homepage/cards)
     'projects.featured': 'Featured Projects',
 
     // Huellas
@@ -117,6 +272,157 @@ export const translations: Translations = {
     'nav.themeElectric': 'Eléctrico',
     'nav.themeCyber': 'Ciber',
     'nav.toggleThemeLabel': 'Cambiar tema',
+    'nav.brand': 'Fernanda Montalván',
+    'nav.projects': 'Proyectos',
+    'nav.playground': 'Playground',
+    'nav.about': 'Sobre mí',
+    'nav.resume': 'Currículum',
+    'nav.contact': 'Contacto',
+    'nav.language': 'Idioma',
+
+    // Resume (titles, nav, updated tag)
+    'resume.title': 'Currículum',
+    'resume.download': 'Descargar PDF',
+    'resume.updated': 'Actualizado sep 2025',
+    'resume.summaryTitle': 'Resumen profesional',
+    'resume.skillsTitle': 'Habilidades técnicas',
+    'resume.experienceTitle': 'Experiencia',
+    'resume.educationTitle': 'Formación',
+    'resume.certificationsTitle': 'Certificaciones',
+    'resume.nav.summary': 'Resumen',
+    'resume.nav.experience': 'Experiencia',
+    'resume.nav.skills': 'Habilidades',
+    'resume.nav.education': 'Formación',
+    'resume.nav.certs': 'Certificaciones',
+    'resume.softSkillsTitle': 'Habilidades blandas',
+    'resume.softSkills.json': JSON.stringify([
+      'Comunicación',
+      'Trabajo en equipo',
+      'Resolución de problemas',
+      'Adaptabilidad',
+      'Atención al detalle',
+      'Responsabilidad',
+      'Gestión del tiempo',
+      'Mentoría y formación',
+      'Empatía con el usuario',
+      'Documentación'
+    ]),
+
+
+    // Resume (dynamic content)
+    'resume.summary':
+      'Desarrolladora Full-Stack (React, TypeScript, PHP, MySQL) enfocada en UX limpia, accesibilidad y entregas pragmáticas. La experiencia en Soporte Técnico y formación KYC me ayuda a traducir necesidades reales en interfaces y APIs fiables.',
+
+    'resume.skills.json': JSON.stringify([
+      'React', 'TypeScript', 'Vite',
+      'Node.js', 'Express',
+      'PHP', 'MySQL/MariaDB',
+      'Tailwind 4.1', 'shadcn/ui',
+      'Prisma', 'Figma',
+      'Docker (básico)', 'GitHub Actions'
+    ]),
+
+    'resume.experience.json': JSON.stringify([
+      {
+        role: 'Especialista KYC',
+        company: 'Fourthline',
+        period: '2024–2025',
+        location: 'Barcelona, España',
+        bullets: [
+          'Realicé controles KYC y QES cumpliendo AML/eIDAS; reduje errores de verificación en 25%.',
+          'Optimicé flujos de verificación con equipos transversales, reduciendo el tiempo de resolución en 20%.'
+        ]
+      },
+      {
+        role: 'Formadora de Riesgo',
+        company: 'Teleperformance',
+        period: '2022–2023',
+        location: 'Barcelona, España',
+        bullets: [
+          'Diseñé e impartí formaciones en prevención de fraude, aumentando la puntuación de agentes en 15%.',
+          'Mantuve contenidos alineados con políticas de cumplimiento.'
+        ]
+      },
+      {
+        role: 'Especialista de Riesgo',
+        company: 'Teleperformance',
+        period: '2022',
+        location: 'Barcelona, España',
+        bullets: [
+          'Revisión de comercios y transacciones para validar cumplimiento; prevención potencial > €50K en fraude.',
+          'Informes diarios a dirección con patrones de riesgo y propuestas de mitigación.'
+        ]
+      },
+      {
+        role: 'Embajadora Office 365 (Microsoft)',
+        company: 'Concentrix',
+        period: '2019–2021',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Soporte T2 para Exchange, Teams, SharePoint; onboarding y licenciamiento.',
+          'Apoyo en migración híbrida/nube a Azure AD; resolución de integración.',
+          'Actualización de KB interna y apoyo en formaciones.'
+        ]
+      },
+      {
+        role: 'Soporte Técnico Sr. (Microsoft)',
+        company: 'Concentrix',
+        period: '2018–2019',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Soporte de primera línea para Windows y suite Microsoft.',
+          'Reseteo de contraseñas y recuperación de cuentas; mejora de tiempos de acceso.'
+        ]
+      }
+    ]),
+
+    'resume.education.json': JSON.stringify([
+      {
+        title: 'Desarrolladora de Aplicaciones Web con React (Full-Stack)',
+        org: 'Fundación Esplai – Migracode',
+        hours: '376h',
+        year: '2025',
+        location: 'Barcelona, España',
+        details: ['React, TypeScript, Node/Express, Vite, Tailwind, proyectos en equipo']
+      },
+      {
+        title: 'Desarrolladora de Aplicaciones Web',
+        org: 'Grup CIEF – SOC (Certificado Profesional)',
+        hours: '510h',
+        year: '2025',
+        location: 'Barcelona, España',
+        details: ['HTML, CSS, JavaScript, PHP, MySQL, despliegues']
+      },
+      {
+        title: 'Ciberseguridad en la Industria',
+        org: 'MainJobs',
+        hours: '120h',
+        year: '2025',
+        location: 'Barcelona, España',
+        details: ['Fundamentos de seguridad, riesgos, mitigación y buenas prácticas']
+      }
+    ]),
+
+    'resume.certs.json': JSON.stringify([
+      { title: 'Microsoft Azure Fundamentals (AZ-900)' },
+      { title: 'Gestión de Proyectos Ágiles con SCRUM', org: 'Índice Gestoría y Formación', year: '2024', location: 'Barcelona' },
+      { title: 'Diplomacia Global – Diplomacy in the Modern World', org: 'University of London', year: '2020', location: 'Managua' }
+    ]),
+
+    // Contact (subtitle -> "juntos")
+    'contact.title': 'Contacto',
+    'contact.subtitle': 'Construyamos algo genial juntos.',
+    'contact.nameLabel': 'Tu nombre',
+    'contact.emailLabel': 'Correo electrónico',
+    'contact.whereLabel': '¿Desde dónde nos contactas?',
+    'contact.subjectLabel': 'Asunto (opcional)',
+    'contact.messageLabel': 'Mensaje',
+    'contact.privacyLabel': 'Acepto ser contactada sobre esta consulta.',
+    'contact.submit': 'Enviar mensaje',
+    'contact.sending': 'Enviando…',
+    'contact.success': '¡Gracias! Tu mensaje ha sido enviado.',
+    'contact.error': 'Algo salió mal. Inténtalo de nuevo.',
+    'contact.honeypot': 'Deja este campo vacío',
 
     // Footer
     'footer.rights': 'Todos los derechos reservados.',
@@ -128,7 +434,6 @@ export const translations: Translations = {
     'about.note':
       'Disfruto traduciendo problemas reales de usuarios en interfaces simples y trabajo a lo largo del stack cuando es necesario. Actualmente destacando Huellas y una versión renovada de Music Library.',
 
-    // Support stack
     'about.support.title': 'Stack de soporte práctico',
     'about.support.item1': 'Administración y soporte de Microsoft 365 / Office 365',
     'about.support.item2': 'Administración de Google Workspace (GSuite)',
@@ -137,14 +442,12 @@ export const translations: Translations = {
     'about.support.item5': 'Ticketing, documentación y bases de conocimiento',
     'about.support.item6': 'Operaciones de Riesgo/KYC y formación de agentes',
 
-    // Certifications
     'about.certs.title': 'Certificaciones y formación',
     'about.certs.item1': 'Certificado de Desarrollo de Aplicaciones Web — 510h',
     'about.certs.item2': 'Bootcamp Full-Stack con React — 376h (Fundación Esplai, sep 2025)',
     'about.certs.item3': 'Microsoft Azure Fundamentals (AZ-900)',
     'about.certs.item4': 'Insignia JavaScript FullStack Junior Developer',
 
-    // Core tech
     'about.coreTech.title': 'Tecnologías principales',
     'tech.react': 'React',
     'tech.typescript': 'TypeScript',
@@ -161,10 +464,8 @@ export const translations: Translations = {
     'tech.nocodb': 'NocoDB',
     'tech.docker': 'Docker',
 
-    // Projects
     'projects.featured': 'Proyectos destacados',
 
-    // Huellas
     'projects.huellas.title': 'Huellas – Plataforma de Salud de Mascotas',
     'projects.huellas.summary':
       'Plataforma full-stack con autenticación, perfiles de mascotas y registros de salud. Construida con principios de arquitectura limpia y servicios en contenedores.',
@@ -176,7 +477,6 @@ export const translations: Translations = {
     'projects.huellas.resp2': 'Construí API con Node/Express y contratos tipados',
     'projects.huellas.resp3': 'Dockericé servicios y el esquema MySQL',
 
-    // Music Library
     'projects.music.title': 'Ferzk’s Music Library',
     'projects.music.summary':
       'Librería musical personal con playlists, autenticación de usuarios y metadatos de canciones. Arquitectura PHP modular con esquema SQL normalizado.',
@@ -188,7 +488,6 @@ export const translations: Translations = {
     'projects.music.resp2': 'Diseñé el esquema SQL normalizado de la librería',
     'projects.music.resp3': 'Código PHP modular y claro (includes)',
 
-    // Fernanda’s Academy (UI)
     'projects.academy.title': 'Fernanda’s Academy — Plataforma de aprendizaje (UI)',
     'projects.academy.summary':
       'Prototipo frontend de una plataforma de aprendizaje: búsqueda de cursos, contenido dinámico y ajustes de idioma y tema.',
@@ -201,7 +500,6 @@ export const translations: Translations = {
     'projects.academy.resp2': 'Integración con Bootstrap y diseño responsive',
     'projects.academy.resp3': 'Ajustes de idioma y tema para usuarios',
 
-    // Placeholders
     'projects.placeholder.title': 'Próximo proyecto',
     'projects.placeholder.description': 'Pronto añadiré un nuevo proyecto aquí. ¡Estate atento!',
     'projects.placeholder.summary': 'Marcador de posición para un proyecto futuro del portafolio.',
@@ -220,6 +518,157 @@ export const translations: Translations = {
     'nav.themeElectric': 'Elèctric',
     'nav.themeCyber': 'Ciber',
     'nav.toggleThemeLabel': 'Canviar tema',
+    'nav.brand': 'Fernanda Montalván',
+    'nav.projects': 'Projectes',
+    'nav.playground': 'Playground',
+    'nav.about': 'Sobre mi',
+    'nav.resume': 'Currículum',
+    'nav.contact': 'Contacte',
+    'nav.language': 'Idioma',
+
+    // Resume (titles, nav, updated tag)
+    'resume.title': 'Currículum',
+    'resume.download': 'Descarregar PDF',
+    'resume.updated': 'Actualitzat set. 2025',
+    'resume.summaryTitle': 'Resum professional',
+    'resume.skillsTitle': 'Habilitats tècniques',
+    'resume.experienceTitle': 'Experiència',
+    'resume.educationTitle': 'Formació',
+    'resume.certificationsTitle': 'Certificacions',
+    'resume.nav.summary': 'Resum',
+    'resume.nav.experience': 'Experiència',
+    'resume.nav.skills': 'Habilitats',
+    'resume.nav.education': 'Formació',
+    'resume.nav.certs': 'Certificacions',
+    'resume.softSkillsTitle': 'Habilitats toves',
+    'resume.softSkills.json': JSON.stringify([
+      'Comunicació',
+      'Treball en equip',
+      'Resolució de problemes',
+      'Adaptabilitat',
+      'Atenció al detall',
+      'Responsabilitat',
+      'Gestió del temps',
+      'Mentoria i formació',
+      'Empatia amb l’usuari',
+      'Documentació'
+    ]),
+
+
+    // Resume (dynamic content)
+    'resume.summary':
+      'Desenvolupadora Full-Stack (React, TypeScript, PHP, MySQL) centrada en UX neta, accessibilitat i lliuraments pragmàtics. L’experiència en Suport Tècnic i formació KYC m’ajuda a traduir necessitats reals en interfícies i APIs fiables.',
+
+    'resume.skills.json': JSON.stringify([
+      'React', 'TypeScript', 'Vite',
+      'Node.js', 'Express',
+      'PHP', 'MySQL/MariaDB',
+      'Tailwind 4.1', 'shadcn/ui',
+      'Prisma', 'Figma',
+      'Docker (bàsic)', 'GitHub Actions'
+    ]),
+
+    'resume.experience.json': JSON.stringify([
+      {
+        role: 'Especialista KYC',
+        company: 'Fourthline',
+        period: '2024–2025',
+        location: 'Barcelona, Espanya',
+        bullets: [
+          'Controls KYC i QES complint AML/eIDAS; reducció d’errors de verificació del 25%.',
+          'Optimització de fluxos amb equips transversals, reduint el temps mitjà de resolució en un 20%.'
+        ]
+      },
+      {
+        role: 'Formadora de Risc',
+        company: 'Teleperformance',
+        period: '2022–2023',
+        location: 'Barcelona, Espanya',
+        bullets: [
+          'Formacions en prevenció de frau, augmentant la puntuació d’agents en un 15%.',
+          'Manteniment de continguts alineats amb polítiques de compliment.'
+        ]
+      },
+      {
+        role: 'Especialista de Risc',
+        company: 'Teleperformance',
+        period: '2022',
+        location: 'Barcelona, Espanya',
+        bullets: [
+          'Revisió d’altes i transaccions per validar compliment; prevenció potencial > €50K en frau.',
+          'Informes diaris a direcció amb patrons de risc i mesures de mitigació.'
+        ]
+      },
+      {
+        role: 'Ambassador Office 365 (Microsoft)',
+        company: 'Concentrix',
+        period: '2019–2021',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Suport N2 per a Exchange, Teams, SharePoint; onboarding i llicències.',
+          'Suport en migració híbrid/núvol a Azure AD; resolució d’integració.',
+          'Actualització de KB intern i suport en formacions.'
+        ]
+      },
+      {
+        role: 'Suport Tècnic Sr. (Microsoft)',
+        company: 'Concentrix',
+        period: '2018–2019',
+        location: 'Managua, Nicaragua',
+        bullets: [
+          'Suport de primera línia per a Windows i suite Microsoft.',
+          'Restabliment de contrasenyes i recuperació de comptes.'
+        ]
+      }
+    ]),
+
+    'resume.education.json': JSON.stringify([
+      {
+        title: 'Desenvolupadora d’Aplicacions Web amb React (Full-Stack)',
+        org: 'Fundació Esplai – Migracode',
+        hours: '376h',
+        year: '2025',
+        location: 'Barcelona, Espanya',
+        details: ['React, TypeScript, Node/Express, Vite, Tailwind, projectes en equip']
+      },
+      {
+        title: 'Desenvolupadora d’Aplicacions Web',
+        org: 'Grup CIEF – SOC (Certificat Professional)',
+        hours: '510h',
+        year: '2025',
+        location: 'Barcelona, Espanya',
+        details: ['HTML, CSS, JavaScript, PHP, MySQL, desplegaments']
+      },
+      {
+        title: 'Ciberseguretat a la Indústria',
+        org: 'MainJobs',
+        hours: '120h',
+        year: '2025',
+        location: 'Barcelona, Espanya',
+        details: ['Fonaments de seguretat, risc, mitigació i bones pràctiques']
+      }
+    ]),
+
+    'resume.certs.json': JSON.stringify([
+      { title: 'Microsoft Azure Fundamentals (AZ-900)' },
+      { title: 'Gestió Àgil de Projectes amb SCRUM', org: 'Índice Gestoría y Formación', year: '2024', location: 'Barcelona' },
+      { title: 'Global Diplomacy – Diplomacy in the Modern World', org: 'University of London', year: '2020', location: 'Managua' }
+    ]),
+
+    // Contact
+    'contact.title': 'Contacte',
+    'contact.subtitle': 'Construïm alguna cosa genial plegats.',
+    'contact.nameLabel': 'El teu nom',
+    'contact.emailLabel': 'Correu electrònic',
+    'contact.whereLabel': 'Des d’on ens contactes?',
+    'contact.subjectLabel': 'Assumpte (opcional)',
+    'contact.messageLabel': 'Missatge',
+    'contact.privacyLabel': 'Autoritzo que em contactin sobre aquesta consulta.',
+    'contact.submit': 'Enviar missatge',
+    'contact.sending': 'Enviant…',
+    'contact.success': 'Gràcies! El teu missatge s’ha enviat.',
+    'contact.error': 'Alguna cosa ha fallat. Torna-ho a provar.',
+    'contact.honeypot': 'Deixa aquest camp buit',
 
     // Footer
     'footer.rights': 'Tots els drets reservats.',
@@ -231,7 +680,6 @@ export const translations: Translations = {
     'about.note':
       'Gaudeixo de traduir problemes reals d’usuari en interfícies simples i treballar a tot l’stack quan cal. Actualment destaquen Huellas i una versió renovada de Music Library.',
 
-    // Support stack
     'about.support.title': 'Stack de suport pràctic',
     'about.support.item1': 'Administració i suport de Microsoft 365 / Office 365',
     'about.support.item2': 'Administració de Google Workspace (GSuite)',
@@ -240,14 +688,12 @@ export const translations: Translations = {
     'about.support.item5': 'Ticketing, documentació i bases de coneixement',
     'about.support.item6': "Operacions de Risc/KYC i formació d'agents",
 
-    // Certifications
     'about.certs.title': 'Certificacions i formació',
     'about.certs.item1': 'Certificat de Desenvolupament d’Aplicacions Web — 510h',
     'about.certs.item2': 'Bootcamp Full-Stack amb React — 376h (Fundació Esplai, set. 2025)',
     'about.certs.item3': 'Microsoft Azure Fundamentals (AZ-900)',
     'about.certs.item4': 'Insígnia JavaScript FullStack Junior Developer',
 
-    // Core tech
     'about.coreTech.title': 'Tecnologies principals',
     'tech.react': 'React',
     'tech.typescript': 'TypeScript',
@@ -264,10 +710,8 @@ export const translations: Translations = {
     'tech.nocodb': 'NocoDB',
     'tech.docker': 'Docker',
 
-    // Projects
     'projects.featured': 'Projectes destacats',
 
-    // Huellas
     'projects.huellas.title': 'Huellas – Plataforma de Salut per a Mascotes',
     'projects.huellas.summary':
       'Plataforma full-stack amb autenticació, perfils de mascotes i registres de salut. Construïda amb principis d’arquitectura neta i serveis contenitzats.',
@@ -279,7 +723,6 @@ export const translations: Translations = {
     'projects.huellas.resp2': 'API amb Node/Express i contractes tipats',
     'projects.huellas.resp3': 'Dockerització de serveis i esquema MySQL',
 
-    // Music Library
     'projects.music.title': 'Ferzk’s Music Library',
     'projects.music.summary':
       'Biblioteca musical personal amb playlists, autenticació d’usuaris i metadades de cançons. Arquitectura PHP modular amb esquema SQL normalitzat.',
@@ -291,7 +734,6 @@ export const translations: Translations = {
     'projects.music.resp2': 'Disseny d’esquema SQL normalitzat',
     'projects.music.resp3': 'Codi PHP modular i net (includes)',
 
-    // Fernanda’s Academy (UI)
     'projects.academy.title': 'Fernanda’s Academy — Plataforma d’aprenentatge (UI)',
     'projects.academy.summary':
       'Prototip frontend d’una plataforma d’aprenentatge: cerca de cursos, contingut dinàmic i ajustos d’idioma i tema.',
@@ -304,7 +746,6 @@ export const translations: Translations = {
     'projects.academy.resp2': 'Integració amb Bootstrap i disseny responsive',
     'projects.academy.resp3': "Ajustos d’idioma i tema per a usuaris",
 
-    // Placeholders
     'projects.placeholder.title': 'Projecte proper',
     'projects.placeholder.description': 'Aviat afegiré un nou projecte aquí. Estigues atent!',
     'projects.placeholder.summary': 'Marcador de posició per a un projecte futur del portafoli.',
