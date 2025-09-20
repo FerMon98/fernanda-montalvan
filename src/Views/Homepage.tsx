@@ -239,10 +239,7 @@ export default function HomePage(): JSX.Element {
 
                     {consent === 'accepted' ? (
                         <>
-                            <SpotifyNowPlaying
-                                discordId="1134065698080030742"
-                                label={t('about.personal.listeningNow')}
-                            />
+                            <SpotifyNowPlaying label={t('about.personal.listeningNow')} />
                             <div className="mt-6 grid gap-4 md:grid-cols-3">
                                 {/* tus 3 iframes exactamente igual */}
                             </div>
