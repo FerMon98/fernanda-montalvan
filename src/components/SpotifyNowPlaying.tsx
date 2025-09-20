@@ -30,10 +30,16 @@ export default function SpotifyNowPlaying(
         let mounted = true;
 
         const load = async () => {
-
             const res = await fetch(`${NETLIFY_URL}/api/spotify-now`, { cache: 'no-store' });
-            if (res.status === 204) { if (mounted) setNow(null); return; }
-            if (!res.ok) throw new Error(`Spotify error ${res.status}`);
+            if (res.status === 204) { // nothing playing
+                if (mounted) setNow(null);
+                return;
+            }
+            if (!res.ok) {
+                // optional: hide widget quietly on error
+                if (mounted) setNow(null);
+                return;
+            }
             const current = (await res.json()) as SpotifyInfo | null;
             if (mounted) setNow(current);
         };
