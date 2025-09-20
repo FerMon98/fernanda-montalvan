@@ -11,6 +11,7 @@ import { JSX, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslate } from '../i18n/useTranslate';
 import SpotifyNowPlaying from '../components/SpotifyNowPlaying';
+import { useConsent } from '../components/legal/useConsent'
 
 // Tech icons (already used in your page)
 import { FaReact, FaNodeJs, FaPhp } from 'react-icons/fa';
@@ -60,6 +61,7 @@ export default function HomePage(): JSX.Element {
 
     const rawTitle = tr('hero.title', "Hi, I'm Fernanda — Full-Stack Developer");
     const titleParts = rawTitle.split('Fernanda');
+    const { consent, setConsent } = useConsent();
 
     return (
         <main className="relative overflow-hidden">
@@ -234,10 +236,50 @@ export default function HomePage(): JSX.Element {
 
                     {/* Real-time Spotify via Discord presence */}
                     <h3 className="mt-6 text-xl font-semibold text-[var(--text-app)]">SPOTIFY</h3>
-                    <SpotifyNowPlaying
-                        discordId="1134065698080030742"
-                        label={tr('about.personal.listeningNow', 'Listening now')}
-                    />
+
+                    {consent === 'accepted' ? (
+                        <>
+                            <SpotifyNowPlaying
+                                discordId="1134065698080030742"
+                                label={t('about.personal.listeningNow')}
+                            />
+                            <div className="mt-6 grid gap-4 md:grid-cols-3">
+                                {/* tus 3 iframes exactamente igual */}
+                            </div>
+                        </>
+                    ) : (
+                        <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-5 text-sm text-white/85">
+                            {t('cookie.blocked.spotifyText')}
+                            <div className="mt-3 flex gap-2">
+                                <button
+                                    className="rounded-2xl bg-white text-black px-4 py-2"
+                                    onClick={() => setConsent('accepted')}
+                                >
+                                    {t('cookie.blocked.acceptAndLoad')}
+                                </button>
+                                <button
+                                    className="rounded-2xl border border-white/20 px-4 py-2 hover:bg-white/5"
+                                    onClick={() => setConsent('rejected')}
+                                >
+                                    {t('cookie.blocked.reject')}
+                                </button>
+                                <button
+                                    className="underline underline-offset-4"
+                                    onClick={() => setConsent('unset')}
+                                    aria-label={t('footer.cookiePrefs')}
+                                >
+                                    {t('cookie.blocked.prefs')}
+                                </button>
+                            </div>
+                            <p className="mt-2 text-xs opacity-80">
+                                {t('cookie.blocked.moreInfo')}{' '}
+                                <a href="/cookies" className="underline">
+                                    {t('legal.nav.cookies')}
+                                </a>
+                                .
+                            </p>
+                        </div>
+                    )}
 
 
                     {/* Playlists */}
