@@ -1,21 +1,52 @@
 /**
- * Footer component
- * Displays site credits, social links, and adapts to theme.
- * Uses i18n translations for accessibility and localization.
+ * Footer component — with legal links + cookie preferences
  */
-
-import { useTranslate } from '../i18n/useTranslate';
+import { useTranslate } from '../i18n/useTranslate'
+import { useConsent } from '../components/legal/useConsent'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
-  const t = useTranslate();
+  const t = useTranslate()
+  const { setConsent } = useConsent()
 
   return (
     <footer className="border-t border-white/10 bg-card py-8 text-sm">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 md:flex-row md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
         {/* Left side */}
         <p className="opacity-80">
-          © {new Date().getFullYear()} Fernanda Montalván. {t('footer.rights')}
+          © {new Date().getFullYear()} Fernanda Montalván. <br /> {t('footer.rights')}
         </p>
+
+        {/* Middle: Legal links */}
+        <nav aria-label="Legal">
+          <ul className="flex flex-wrap items-center gap-4">
+            <li>
+              <Link to="/#/legal" className="hover:underline">
+                {t('legal.nav.notice')}
+              </Link>
+            </li>
+            <li>
+              <Link to="/#/privacy" className="hover:underline">
+                {t('legal.nav.privacy')}
+              </Link>
+            </li>
+            <li>
+              <Link to="/#/cookies" className="hover:underline">
+                {t('legal.nav.cookies')}
+              </Link>
+            </li>
+            <li>
+              <button
+                type="button"
+                onClick={() => setConsent('unset')}
+                className="underline decoration-dotted underline-offset-4 hover:decoration-solid"
+                aria-label={t('footer.cookiePrefs')}
+              >
+                {t('footer.cookiePrefs')}
+              </button>
+            </li>
+          </ul>
+        </nav>
 
         {/* Right side: Social links */}
         <nav aria-label={t('footer.social')}>
@@ -41,10 +72,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="mailto:fernandaramo@outlook.es"
-                className="hover:underline"
-              >
+              <a href="mailto:fernandaramo@outlook.es" className="hover:underline">
                 Email
               </a>
             </li>
@@ -52,5 +80,5 @@ export default function Footer() {
         </nav>
       </div>
     </footer>
-  );
+  )
 }
