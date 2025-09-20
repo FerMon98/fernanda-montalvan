@@ -39,5 +39,5 @@
   },
   "include": [
     "src"
-  ]
+, "netlify/functions"  ]
 }

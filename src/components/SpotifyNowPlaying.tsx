@@ -19,25 +19,23 @@ type LanyardResponse = {
     data?: { spotify?: SpotifyInfo };
 };
 
+const NETLIFY_URL = 'https://fernandamontalvan.netlify.app';
+
 export default function SpotifyNowPlaying(
     { discordId, label = 'Listening now' }:
-    { discordId: string; label?: string }) {
+        { discordId: string; label?: string }) {
     const [now, setNow] = useState<SpotifyInfo | null>(null);
 
     useEffect(() => {
         let mounted = true;
 
         const load = async () => {
-            const res = await fetch(`https://api.lanyard.rest/v1/users/${discordId}`);
-            if (!res.ok) {
-                // If the user isn't tracked yet (404), just hide the widget.
-                if (res.status === 404) { if (mounted) setNow(null); return; }
-                throw new Error(`Lanyard error ${res.status}`);
-            }
-            const json: LanyardResponse = await res.json();
-            const current = json.data?.spotify ?? null;
-            if (mounted) setNow(current);
 
+            const res = await fetch(`${NETLIFY_URL}/api/spotify-now`, { cache: 'no-store' });
+            if (res.status === 204) { if (mounted) setNow(null); return; }
+            if (!res.ok) throw new Error(`Spotify error ${res.status}`);
+            const current = (await res.json()) as SpotifyInfo | null;
+            if (mounted) setNow(current);
         };
 
         load();
