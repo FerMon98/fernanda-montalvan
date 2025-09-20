@@ -44,9 +44,9 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
           <NavLink to="/projects" className={linkClass}>
             {t('nav.projects')}
           </NavLink>
-          <NavLink to="/playground" className={linkClass}>
+          {/* <NavLink to="/playground" className={linkClass}>
             {t('nav.playground')}
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/resume" className={linkClass}>
             {t('nav.resume')}
           </NavLink>
@@ -95,11 +95,11 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps) {
               {t('nav.projects')}
             </NavLink>
           </li>
-          <li className="mt-2">
+          {/*<li className="mt-2">
             <NavLink to="/playground" onClick={() => setOpen(false)} className={linkClass}>
               {t('nav.playground')}
             </NavLink>
-          </li>
+          </li>*/}
           <li className="mt-2">
             <NavLink to="/resume" onClick={() => setOpen(false)} className={linkClass}>
               {t('nav.resume')}
