@@ -257,6 +257,26 @@ export const translations: Translations = {
     'projects.placeholder.title': 'Upcoming Project',
     'projects.placeholder.description': 'A new project will be added here soon. Stay tuned!',
     'projects.placeholder.summary': 'Placeholder for a future portfolio project.',
+    // Personal slice (NEW)
+    'about.personal.tagline': 'Night owl · Ocean lover · Coding lover',
+    'about.personal.languages': 'ES (native) · EN (C2) · CA (B1)',
+    'about.personal.bio':
+      "I’m Fernanda — curious builder, music explorer, and late-night coder. I love discovering new sounds, reading, good food, and anything that puts me near nature—especially water. I’m happiest in winter nights with rain and a clean UI taking shape.",
+    'about.personal.values.json': JSON.stringify(['Loyalty', 'Honesty', 'Ownership']),
+    'about.personal.hobbies.json': JSON.stringify([
+      'Discovering new music',
+      'Reading',
+      'Food & cooking',
+      'Nature walks',
+      'Water views & swims',
+      'Night owl energy',
+      'Pets'
+    ]),
+    'about.personal.horus': 'This is Horus — Labrador + German Shepherd mix and professional treat negotiator.',
+    'about.personal.now': 'Doing Now: Learning German (Duolingo) · Continuing Catalan · Practicing driving · Polishing my portfolio',
+    'about.personal.valuesTitle': 'Core beliefs',
+    'about.personal.listeningNow': 'Listening now',
+
   },
 
   es: {
@@ -503,6 +523,27 @@ export const translations: Translations = {
     'projects.placeholder.title': 'Próximo proyecto',
     'projects.placeholder.description': 'Pronto añadiré un nuevo proyecto aquí. ¡Estate atento!',
     'projects.placeholder.summary': 'Marcador de posición para un proyecto futuro del portafolio.',
+    // Personal slice (NEW)
+    'about.personal.tagline': 'Ave nocturna · Amante del océano · Amante del código',
+    'about.personal.languages': 'ES (nativa) · EN (C2) · CA (B1)',
+    'about.personal.bio':
+      'Soy Fernanda—constructora curiosa, exploradora musical y desarrolladora nocturna. Me encanta descubrir música nueva, leer, la buena comida y cualquier plan que me acerque a la naturaleza—especialmente al agua. Soy feliz en noches de invierno con lluvia y una UI limpia tomando forma.',
+    'about.personal.values.json': JSON.stringify(['Lealtad', 'Honestidad', 'Responsabilidad']),
+    'about.personal.hobbies.json': JSON.stringify([
+      'Descubrir música nueva',
+      'Lectura',
+      'Comida y cocina',
+      'Paseos en la naturaleza',
+      'Vistas al agua y nadar',
+      'Energía nocturna',
+      'Mascotas'
+    ]),
+    'about.personal.horus': 'Este es Horus — mezcla de Labrador y Pastor Alemán, experto negociador de chuches.',
+    'about.personal.now': 'En lo que estoy trabajando: Aprendiendo alemán (Duolingo) · Continuando catalán · Practicando conducir · Puliendo mi portafolio',
+    'about.personal.valuesTitle': 'Valores',
+    'about.personal.listeningNow': 'Escuchando ahora',
+
+
   },
 
   ca: {
@@ -749,5 +790,26 @@ export const translations: Translations = {
     'projects.placeholder.title': 'Projecte proper',
     'projects.placeholder.description': 'Aviat afegiré un nou projecte aquí. Estigues atent!',
     'projects.placeholder.summary': 'Marcador de posició per a un projecte futur del portafoli.',
+
+    // Personal slice (NEW)
+    'about.personal.tagline': 'Noctàmbula · Amant de l’oceà · Amant del codi',
+    'about.personal.languages': 'ES (nativa) · EN (C2) · CA (B1)',
+    'about.personal.bio':
+      'Soc la Fernanda—constructora curiosa, exploradora de música i programadora nocturna. M’agrada descobrir sons nous, llegir, el bon menjar i qualsevol pla que em porti a prop de la natura—especialment de l’aigua. Soc feliç en nits d’hivern amb pluja i una UI neta prenent forma.',
+    'about.personal.values.json': JSON.stringify(['Lleialtat', 'Honestedat', 'Responsabilitat']),
+    'about.personal.hobbies.json': JSON.stringify([
+      'Descobrir música nova',
+      'Lectura',
+      'Menjar i cuina',
+      'Passejos per la natura',
+      'Vistes a l’aigua i nedar',
+      'Energia nocturna',
+      'Mascotes'
+    ]),
+    'about.personal.horus': 'Aquest és en Horus — barreja de Labrador i Pastor Alemany, expert negociador de xuxes.',
+    'about.personal.now': 'Estic treballant en: Aprenent alemany (Duolingo) · Continuant català · Practicant conduir · Polint el meu portfoli',
+    'about.personal.valuesTitle': 'Valors',
+    'about.personal.listeningNow': 'Escoltant ara',
+
   },
 };
