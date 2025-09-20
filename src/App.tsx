@@ -7,7 +7,16 @@ import NavBar from './components/NavBar'
 import Footer from './components/footer'
 import LanguageProvider from './i18n/LanguageProvider'
 import { Routes, Route } from 'react-router-dom'
-import {JSX} from 'react'
+import { JSX } from 'react'
+
+// Consent + banner
+import { ConsentProvider } from './components/legal/useConsent'
+import CookieConsent from './components/legal/CookieConsent'
+
+// Legal pages
+import LegalNotice from './legal/LegalNotice'
+import PrivacyPolicy from './legal/PrivacyPolicy'
+import CookiesPolicy from './legal/CookiesPolicy'
 
 // Pages
 import HomePage from './Views/Homepage'
@@ -35,18 +44,31 @@ export default function App(): JSX.Element {
 
   return (
     <LanguageProvider>
-      <div className="min-h-dvh header-pad">
-        <NavBar theme={theme} onToggleTheme={toggleTheme} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
-          <Route path="/playground" element={<PlaygroundPage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <Footer />
-      </div>
+      <ConsentProvider>
+        <div className="min-h-dvh header-pad">
+          <NavBar theme={theme} onToggleTheme={toggleTheme} />
+
+          <Routes>
+            {/* Public routes */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+            <Route path="/playground" element={<PlaygroundPage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+
+            {/* Legal routes */}
+            <Route path="/legal" element={<LegalNotice />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/cookies" element={<CookiesPolicy />} />
+          </Routes>
+
+          <Footer />
+          {/* Cookie banner (aparece cuando el consentimiento está en 'unset') */}
+          <CookieConsent />
+        </div>
+      </ConsentProvider>
     </LanguageProvider>
   )
 }
+ 
